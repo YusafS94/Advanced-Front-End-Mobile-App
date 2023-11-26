@@ -1,0 +1,50 @@
+{
+    "fighters": {
+      "Jon": {
+        "name": "Jon Jones",
+        "age": "35",
+        "birthday": "19/07/1987"
+      },
+      "Tom": {
+        "name": "Tom Aspinall",
+        "age": "30",
+        "birthday": "19/07/1990"
+      }
+    },
+    "name": "Jon Jones",
+    "nickname": "Bones",
+    "fullname": "Jon \"Bones\" Jones",
+    "record": "21-1-0",
+    "association": "Jackson-Wink MMA",
+    "age": "27",
+    "birthday": "1987-07-19",
+    "hometown": "Rochester, New York USA",
+    "nationality": "United States",
+    "location": "Endicott, New York USA",
+    "height": "6' 4\"",
+    "height_cm": "193",
+    "weight": "205",
+    "weight_kg": "93",
+    "weight_class": "Light Heavyweight",
+    "college": "Iowa Central",
+    "degree": "Associates Degree",
+    "summary": [
+      "Wrestling",
+      "jiu-jitsu",
+      "muay thai"
+    ],
+    "wins": {
+      "total": 21,
+      "knockouts": 9,
+      "submissions": 6,
+      "decisions": 6,
+      "others": 0
+    },
+    "losses": {
+      "total": 1,
+      "knockouts": 0,
+      "submissions": 0,
+      "decisions": 0,
+      "others": 0
+    }
+}

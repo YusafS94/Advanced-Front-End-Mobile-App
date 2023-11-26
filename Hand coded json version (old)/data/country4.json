@@ -1,0 +1,7 @@
+{
+	"id":4,
+	"name":"USA",
+	"capital":"Washington",
+	"population":321000000,
+	"continent": "North America"
+}

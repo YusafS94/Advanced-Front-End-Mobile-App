@@ -1,0 +1,7 @@
+{
+	"id":2,
+	"name":"France",
+	"capital":"Paris",
+	"population":65000000,
+	"continent": "Europe"
+}

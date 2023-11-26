@@ -1,0 +1,15 @@
+{
+	"id": 1,
+	"name": "Jon Jones",
+	"height": "6 foot 4 inches",
+	"reach": "84.5 inches",
+	"dob": "July 19 1987",
+	"weightClass": "Heavyweight",
+	"p4pRanking": 2,
+	"location": "Alberquerque, New Mexico, USA",
+	"team": "Jackson's MMA Acoma",
+	"wins": 27,
+	"losses": 1,
+	"noContests": 1,
+	"description": "Jones became the youngest champion in UFC history with his title victory over Maurício Rua at age 23. He holds many UFC records in the light heavyweight division, including the most title defenses, most wins, and longest win streak. During much of his championship reign, Jones has been widely considered to be the best pound-for-pound fighter in the world."
+}
