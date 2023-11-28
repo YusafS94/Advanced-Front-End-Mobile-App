@@ -152,21 +152,33 @@ function doSearch()
   const searchTerm = searchBox.value.toLowerCase()
   console.log(searchTerm);
   if(searchTerm.length >= 2){
-    const matchingFilms = films.filter(function(film){
-      if(film.title.toLowerCase().search(searchTerm)>-1){
-        return true;
-      }else{
-        return false;
-      }
-    })
+    
 
-    const filmsFragment = document.createDocumentFragment();
-    matchingFilms.forEach(function(film){
-        const newLi = document.createElement("li");
-        newLi.textContent = `${film.title} (${film.certificate})`;
-        filmsFragment.appendChild(newLi);
-    });
-    filmsList.appendChild(filmsFragment);
+    // Filter items using a search term
+function filterItems(items, searchTerm) {
+  const matchingItems = items.filter(function(item) {
+    if(item.title.toLowerCase().search(searchTerm) >-1) {
+      return true;
+    }else {
+      return false;
+    }
+  })
+  return matchingItems;
+}
+
+// Insert film details into list items
+function insertLiItems (matchedItems) {
+  const insertFragment = document.createDocumentFragment();
+  matchedItems.forEach(function(matchedItem){
+    const newLi = document.createElement("li");
+    newLi.textContent = `${matchedItem.title} (${matchedItem.certificate})`;
+    insertFragment.appendChild(newLi);
+});
+filmsList.appendChild(insertFragment);
+}
+
+    const matchedItems = filterItems(films, searchTerm)
+    insertLiItems(matchedItems)
 	}
 } // end of doSearch, don't remove this line
 
