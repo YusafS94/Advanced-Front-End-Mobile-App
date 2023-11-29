@@ -1,0 +1,11 @@
+.card {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.info {
+    width: 30%;
+}
+.description {
+    width: 70%;
+}

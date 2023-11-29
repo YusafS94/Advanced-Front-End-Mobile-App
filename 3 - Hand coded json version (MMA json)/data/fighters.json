@@ -1,0 +1,27 @@
+[
+	{
+		"id": 1,
+		"name": "Jon Jones",
+		"location": "USA - New Mexico"
+	},
+	{
+		"id": 2,
+		"name": "Tom Aspinall",
+		"location": "UK"
+	},
+	{
+		"id": 3,
+		"name": "Sergei Pavlovich",
+		"location": "Russia"
+	},
+	{
+		"id": 4,
+		"name": "Francis Ngannou",
+		"location": "Las Vegas, Nevada, USA"
+	},
+	{
+		"id": 5,
+		"name": "Charles Oliveira",
+		"location": "São Paulo, Brazil"
+	}
+]
