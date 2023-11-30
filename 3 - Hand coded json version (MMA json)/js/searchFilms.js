@@ -56,7 +56,7 @@ function doSearch() {
 } // end of doSearch, don't remove this line
 
 
-
+// Commented out for loadData
 const searchBox = document.querySelector("#search-box");
 searchBox.addEventListener("keyup", doSearch);
 
