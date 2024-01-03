@@ -1,0 +1,1 @@
+## React + Vite (and SWC) version of front end app (FighterTrax app)
