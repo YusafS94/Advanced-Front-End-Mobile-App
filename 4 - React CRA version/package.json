@@ -1,0 +1,12 @@
+{
+  "name": "3---hand-coded-json-version-(mma-json)",
+  "version": "1.0.0",
+  "description": "This repository contains a JavaScript application that features two pages and dynamically generated content.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
