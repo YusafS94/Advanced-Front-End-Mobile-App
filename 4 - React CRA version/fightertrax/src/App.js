@@ -1,4 +1,6 @@
 import './App.css';
+import { useRef } from "react";
+
 function Header(props) {
   return (
     <header>
@@ -10,13 +12,28 @@ function Main() {
   return (
     <div>
       <p>Find out about MMA fighters.</p>
-      <div id="search-form">
-        <label for="searchInput">Enter a fighter name: </label>
-        <input id="searchInput" placeholder="Fighter name" />
-        <div class="searchResults">
-          <div id="resultsCards"></div>
-        </div>
-      </div>
+      <Form />
+    </div>
+  )
+}
+function Form() {
+  const nameInput = useRef();
+  const submit = (e) => {
+    e.preventDefault(95);
+    const searchTerm = nameInput.current.value;
+  }
+  return (
+    <form id="search-form">
+      <label for="searchInput">Enter a fighter name: </label>
+      <input ref={nameInput} id="searchInput" placeholder="Fighter name" />
+      <button>Search</button>
+    </form>
+  )
+}
+function Results() {
+  return (
+    <div class="searchResults">
+      <div id="resultsCards"></div>
     </div>
   )
 }
