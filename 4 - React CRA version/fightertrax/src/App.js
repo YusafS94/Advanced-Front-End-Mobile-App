@@ -1,5 +1,6 @@
 import './App.css';
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+import fightersData from "./data/fighters.json";
 
 function Header(props) {
   return (
@@ -22,6 +23,7 @@ function Form() {
     e.preventDefault(95);
     const searchTerm = nameInput.current.value;
   }
+
   return (
     <form id="search-form">
       <label for="searchInput">Enter a fighter name: </label>
@@ -37,6 +39,45 @@ function Results() {
     </div>
   )
 }
+function Data() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // Fetch data from local JSON file
+    setData(fightersData);
+  }, []);
+
+  if (data) {
+    return (
+      <div className='mx-auto flex flex-col flex-wrap justify-center items-center md:flex-row border border-red-700'>
+        {/* Render your data as needed */}
+        {data.fighters.map((fighter) => (
+          <div className='w-4/5 md:w-1/5 md:m-2 border border-blue-600 rounded-lg hover:scale-105' key={fighter.id}>
+            <a className='' href='#'>
+              <img className='max-w-full rounded-t-lg' src={require('./imgs/fighter.jpg')} height={150} />
+              {fighter.name},
+              {fighter.id}
+            </a>
+
+            {/* Display other fighter details as needed */}
+          </div>
+        ))
+        }
+      </div >
+    );
+  } else {
+    return (
+      <h1>Loading...</h1>
+    )
+  }
+}
+export function Profile() {
+  return (
+    <section>
+      <h1>Profile page.</h1>
+    </section>
+  )
+}
 function Footer() {
   return (
     <div>
@@ -44,14 +85,14 @@ function Footer() {
     </div>
   )
 }
-function App() {
+export function App() {
   return (
     <div className="App">
       <Header name="FighterTrax" />
       <Main />
+      <Data />
       <Footer />
     </div>
   );
 }
 
-export default App;

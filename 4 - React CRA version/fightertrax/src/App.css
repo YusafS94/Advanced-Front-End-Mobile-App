@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+/* Cards */
+.cardSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fighterCard {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 600px;
+}
+.cardBtn {
+  display: flex;
+  flex-direction: column;
+}
+.cardImg {
+  max-width: 100%;
+}
