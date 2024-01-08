@@ -1,10 +1,21 @@
 import './App.css';
 import { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import fightersData from "./data/fighters.json";
 
+
+function Navigation() {
+  return (
+    <nav>
+      <Link to="/">Home</Link>
+      <Link to="/profile">Profile</Link>
+    </nav>
+  )
+}
 function Header(props) {
   return (
     <header>
+      <Navigation />
       <h1>{props.name}</h1>
     </header>
   )
@@ -73,9 +84,12 @@ function Data() {
 }
 export function Profile() {
   return (
-    <section>
-      <h1>Profile page.</h1>
-    </section>
+    <>
+      <Navigation />
+      <section>
+        <h1>Profile page.</h1>
+      </section></>
+
   )
 }
 function Footer() {
