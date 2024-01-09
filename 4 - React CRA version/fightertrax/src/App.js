@@ -68,9 +68,10 @@ function Data() {
         {allFightersData.fighters.map((fighter) => (
           <div className='w-4/5 md:w-1/5 md:m-2 border border-slate-400 shadow-md hover:shadow-none rounded-lg hover:-translate-y-4 transition-transform' key={fighter.id}>
             <Link to={`/profile/${fighter.id}`}>
-              <img alt={`Profile of ${fighter.name}`} className='max-w-full rounded-t-lg' src={require('./imgs/fighter.jpg')} height={150} />
-              {fighter.name},
-              {fighter.id}
+              <img alt={`Profile of ${fighter.name}`} className='max-w-full rounded-t-lg' src={fighter.img} height={150} />
+              {fighter.name}
+              <br />
+              {fighter.nickname}
             </Link>
 
             {/* Display other fighter details as needed */}
@@ -99,31 +100,6 @@ export function Profile() {
   const { id } = useParams();
   const [fighterData, setFighterData] = useState(null);
 
-
-  // useEffect(() => {
-  //   // const individualFighterData = require('./data/fighter${id}.json');
-
-
-  //   const fetchIndividualFighterData = async () => {
-  //     try {
-  //       const response = await fetch(`./data/fighter${id}.json`);
-  //       console.log('Response:', response);
-  //       if (!response.ok) {
-  //         throw new Error('Failed to fetch fighter data');
-  //       }
-  //       const individualFighterData = await response.json();
-  //       console.log('Individual Fighter Data:', individualFighterData);
-  //       setFighterData(individualFighterData)
-  //     } catch (error) {
-  //       console.error(error)
-  //     }
-  //   }
-
-
-
-  //   fetchIndividualFighterData();
-  // }, [id]);
-
   useEffect(() => {
     fetch(`/data/fighter${id}.json`)
       .then((response) => response.json())
@@ -137,7 +113,7 @@ export function Profile() {
         <Navigation />
         <section>
           <h1>{fighterData.name}'s Profile Page.</h1>
-          <p></p>
+          <p>{fighterData.description}</p>
         </section></>
     )
   } else {

@@ -1,15 +1,90 @@
 {
 	"id": 4,
 	"name": "Francis Ngannou",
-	"height": "6 foot 4 inches",
-	"reach": "83 inches",
-	"dob": "5 September 1986",
-	"weightClass": "Heavyweight",
-	"p4pRanking": -1,
-	"location": "Las Vegas, Nevada, USA",
-	"team": "Xtreme Couture",
-	"wins": 17,
-	"losses": 3,
-	"noContests": 0,
-	"description": "At age 22, Ngannou began training in boxing, despite the initial reluctance of his family. After training for a year, Ngannou stopped training due to an illness. He did various odd jobs to make ends meet, until age 26 when he decided to head to Paris, France, to pursue professional boxing. However upon reaching Europe, he was jailed for two months in Spain for illegally crossing the border. After he reached Paris, he had no money, no friends, and no place to live. After living homeless on the streets of Paris, Ngannou found his way to a boxing club where he met coach Didier Carmont (cousin of Francis Carmont) who was understanding towards his situation. Carmont convinced the gym to let him train at no cost, and introduced Ngannou to the sport of MMA. Additionally, Ngannou became a volunteer at Lo Chorba, a non-profit organization in Paris. When his boxing gym closed for the summer, Lo Chorba's director Khater Yenbou introduced Ngannou to Fernand Lopez and the MMA factory. Being a fan of Mike Tyson, Ngannou was originally interested in learning how to box but Lopez saw his potential in MMA and convinced him to try MMA instead. Lopez gave Ngannou some MMA gear and allowed him to train and sleep at the gym for no cost thus starting Ngannou's MMA career."
+	"nickname": "Bones",
+	"fullname": "Jon \"Bones\" Jones",
+	"img": "https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-01/NGANNOU_FRANCIS_L_03-27.png?itok=s4MVBS7x",
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+	"record": "21-1-0",
+	"association": "Jackson-Wink MMA",
+	"age": "27",
+	"birthday": "1987-07-19",
+	"hometown": "Rochester, New York USA",
+	"nationality": "United States",
+	"location": "Endicott, New York USA",
+	"height": "6' 4\"",
+	"height_cm": "193",
+	"weight": "205",
+	"weight_kg": "93",
+	"weight_class": "Light Heavyweight",
+	"college": "Iowa Central",
+	"degree": "Associates Degree",
+	"summary": [
+		"Wrestling",
+		"jiu-jitsu",
+		"muay thai"
+	],
+	"wins": {
+		"total": 21,
+		"knockouts": 9,
+		"submissions": 6,
+		"decisions": 6,
+		"others": 0
+	},
+	"losses": {
+		"total": 1,
+		"knockouts": 0,
+		"submissions": 0,
+		"decisions": 0,
+		"others": 0
+	},
+	"strikes": {
+		"attempted": 1679,
+		"successful": 916,
+		"standing": 541,
+		"clinch": 188,
+		"ground": 187
+	},
+	"takedowns": {
+		"attempted": 64,
+		"successful": 33,
+		"submissions": 10,
+		"passes": 22,
+		"sweeps": 0
+	},
+	"fights": [
+		{
+			"name": "UFC 182 - Jones vs. Cormier",
+			"date": "Jan / 03 / 2015",
+			"url": "/events/UFC-182-Jones-vs-Cormier-38841",
+			"result": "win",
+			"method": "Decision (Unanimous)",
+			"referee": "Herb Dean",
+			"round": "5",
+			"time": "5:00",
+			"opponent": "Daniel Cormier"
+		},
+		{
+			"name": "UFC 172 - Jones vs. Teixeira",
+			"date": "Apr / 26 / 2014",
+			"url": "/events/UFC-172-Jones-vs-Teixeira-34401",
+			"result": "win",
+			"method": "Decision (Unanimous)",
+			"referee": "Dan Miragliotta",
+			"round": "5",
+			"time": "5:00",
+			"opponent": "Glover Teixeira"
+		},
+		{
+			"name": "UFC 165 - Jones vs. Gustafsson",
+			"date": "Sep / 21 / 2013",
+			"url": "/events/UFC-165-Jones-vs-Gustafsson-30249",
+			"result": "win",
+			"method": "Decision (Unanimous)",
+			"referee": "John McCarthy",
+			"round": "5",
+			"time": "5:00",
+			"opponent": "Alexander Gustafsson"
+		}
+	]
 }
