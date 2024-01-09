@@ -1,14 +1,14 @@
 import './App.css';
 import { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import fightersData from "./data/fighters.json";
+import { Link, useParams } from "react-router-dom";
+// import fightersData from "../public/data/fighters.json";
 
 
 function Navigation() {
   return (
     <nav>
       <Link to="/">Home</Link>
-      <Link to="/profile">Profile</Link>
+      <Link to="/favourites">Favourites</Link>
     </nav>
   )
 }
@@ -51,24 +51,27 @@ function Results() {
   )
 }
 function Data() {
-  const [data, setData] = useState(null);
+  const [allFightersData, setData] = useState(null);
 
   useEffect(() => {
     // Fetch data from local JSON file
-    setData(fightersData);
+
+    fetch(`/data/fighters.json`)
+      .then((response) => response.json())
+      .then((data) => setData(data))
   }, []);
 
-  if (data) {
+  if (allFightersData) {
     return (
       <div className='mx-auto flex flex-col flex-wrap justify-center items-center md:flex-row border border-red-700'>
         {/* Render your data as needed */}
-        {data.fighters.map((fighter) => (
-          <div className='w-4/5 md:w-1/5 md:m-2 border border-blue-600 rounded-lg hover:scale-105' key={fighter.id}>
-            <a className='' href='#'>
-              <img className='max-w-full rounded-t-lg' src={require('./imgs/fighter.jpg')} height={150} />
+        {allFightersData.fighters.map((fighter) => (
+          <div className='w-4/5 md:w-1/5 md:m-2 border border-slate-400 shadow-md hover:shadow-none rounded-lg hover:-translate-y-4 transition-transform' key={fighter.id}>
+            <Link to={`/profile/${fighter.id}`}>
+              <img alt={`Profile of ${fighter.name}`} className='max-w-full rounded-t-lg' src={require('./imgs/fighter.jpg')} height={150} />
               {fighter.name},
               {fighter.id}
-            </a>
+            </Link>
 
             {/* Display other fighter details as needed */}
           </div>
@@ -82,15 +85,66 @@ function Data() {
     )
   }
 }
-export function Profile() {
+export function Favourites() {
   return (
     <>
       <Navigation />
       <section>
-        <h1>Profile page.</h1>
+        <h1>Favourites page.</h1>
       </section></>
 
   )
+}
+export function Profile() {
+  const { id } = useParams();
+  const [fighterData, setFighterData] = useState(null);
+
+
+  // useEffect(() => {
+  //   // const individualFighterData = require('./data/fighter${id}.json');
+
+
+  //   const fetchIndividualFighterData = async () => {
+  //     try {
+  //       const response = await fetch(`./data/fighter${id}.json`);
+  //       console.log('Response:', response);
+  //       if (!response.ok) {
+  //         throw new Error('Failed to fetch fighter data');
+  //       }
+  //       const individualFighterData = await response.json();
+  //       console.log('Individual Fighter Data:', individualFighterData);
+  //       setFighterData(individualFighterData)
+  //     } catch (error) {
+  //       console.error(error)
+  //     }
+  //   }
+
+
+
+  //   fetchIndividualFighterData();
+  // }, [id]);
+
+  useEffect(() => {
+    fetch(`/data/fighter${id}.json`)
+      .then((response) => response.json())
+      .then((data) => setFighterData(data));
+  }, [id]);
+
+  if (fighterData) {
+    console.log('Done')
+    return (
+      <>
+        <Navigation />
+        <section>
+          <h1>{fighterData.name}'s Profile Page.</h1>
+          <p></p>
+        </section></>
+    )
+  } else {
+    return (
+      <h1>Loading...</h1>
+    )
+  }
 }
 function Footer() {
   return (
