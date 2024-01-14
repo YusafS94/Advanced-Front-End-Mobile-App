@@ -38,6 +38,7 @@ function Header(props) {
     </header>
   )
 }
+// THIS IS CODE I DIDN'T USE AS I DIDN'T HAVE TIME TO IMPLEMENT A SEARCH FUNCTION, BUT LEFT IT HERE TO SHOW MY WORK
 // function Form() {
 //   const nameInput = useRef();
 //   const submit = (e) => {
@@ -377,19 +378,19 @@ export function Profile() {
                   <div className='rounded-md border border-slate-600 p-4 w-full flex flex-col items-center bg-white/20 shadow-lg'>
                     <h4>Wins: {fighterData.wins.total}</h4>
                     <div className='flex justify-around w-full'>
-                      <div className='flex flex-col justify-center items-center'>
+                      <div className='flex flex-col justify-center items-center border rounded-sm'>
                         <p>Knockouts</p>
                         <p>{fighterData.wins.knockouts}</p>
                       </div>
-                      <div className='flex flex-col justify-center items-center'>
+                      <div className='flex flex-col justify-center items-center border rounded-sm'>
                         <p>Submissions</p>
                         <p>{fighterData.wins.submissions}</p>
                       </div>
-                      <div className='flex flex-col justify-center items-center'>
+                      <div className='flex flex-col justify-center items-center border rounded-sm'>
                         <p>Decisions</p>
                         <p>{fighterData.wins.decisions}</p>
                       </div>
-                      <div className='flex flex-col justify-center items-center'>
+                      <div className='flex flex-col justify-center items-center border rounded-sm'>
                         <p>Others</p>
                         <p>{fighterData.wins.others}</p>
                       </div>
